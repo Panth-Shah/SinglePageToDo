@@ -4,7 +4,7 @@
 
 Create a 1-page web application where you can add ‘to do’ items. All ‘to do’ items should be visible on the page when added.
 
-### Technologies & Design Patterns Used:
+## Technologies & Design Patterns Used:
 
 * ASP.NET MVC
 * Entity Framework 
@@ -16,9 +16,10 @@ Create a 1-page web application where you can add ‘to do’ items. All ‘to d
 * AJAX
 * JQuery
 
-### Result Screenshot:
+## Result Screenshot:
 
 ![alt text](https://github.com/Panth-Shah/SinglePageToDo/blob/master/TODOScreenshot.PNG)
 
+### Database Entries
 ![alt text](https://github.com/Panth-Shah/SinglePageToDo/blob/master/TODODbEntires.PNG)
 
