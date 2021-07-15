@@ -1,0 +1,12 @@
+﻿@model IEnumerable<SinglePageToDo.Models.MessageViewModel>
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MessageText)
+        </td>
+    </tr>
+}
+</table>

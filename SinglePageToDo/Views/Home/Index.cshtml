@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SinglePageToDo.Models.MessageViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>TODO Logger:</h2>
+
+<div id="divToDoBox">
+    <div id="divToDo"></div>
+</div>
+<div class="form-group">
+    @Html.Label("Task", htmlAttributes: new { @class = "control-label" })
+    <div class="col">
+        <textarea id="txtMessageText" placeholder="What do you need to do?"></textarea>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col">
+        <input type="button" id="btnPost" value="Save Item" />
+    </div>
+</div>
+
+@section Scripts {
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function PostMessage() {
+            GetMessages();
+            $("#btnPost").on("click", function () {
+                var msg = $("#txtMessageText");
+                if (msg.val().length > 0) {
+                    $.ajax({
+                        type: "POST",
+                        url: '@(Url.Action("PostMessage", "Home"))',
+                        data: { message: msg.val() },
+                        success: function (result) {
+                            msg.val("");
+                            GetMessages();
+                        }
+                    });
+                }
+            });
+        });
+        function GetMessages() {
+            $.ajax({
+                type: "GET",
+                url: '@(Url.Action("GetMessages","Home"))',
+                success: function (result) {
+                    $("#txtMessageText").empty();
+                    $('#divToDo').html(result);
+                }
+            });
+        }
+    </script>
+}

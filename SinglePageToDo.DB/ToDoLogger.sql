@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[ToDoLogger]
+(
+	[MessageId] INT NOT NULL IDENTITY(1,1) PRIMARY KEY, 
+    [MessageText] NVARCHAR(MAX) NOT NULL, 
+    [DatePosted] DATETIME2 NOT NULL DEFAULT GETDATE()
+)
