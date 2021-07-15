@@ -19,3 +19,6 @@ Create a 1-page web application where you can add ‘to do’ items. All ‘to d
 ### Result Screenshot:
 
 ![alt text](https://github.com/Panth-Shah/SinglePageToDo/blob/master/TODOScreenshot.PNG)
+
+![alt text](https://github.com/Panth-Shah/SinglePageToDo/blob/master/TODODbEntires.PNG)
+
