@@ -20,6 +20,6 @@ Create a 1-page web application where you can add ‘to do’ items. All ‘to d
 
 ![alt text](https://github.com/Panth-Shah/SinglePageToDo/blob/master/TODOScreenshot.PNG)
 
-### Database Entries
+## Database Entries:
 ![alt text](https://github.com/Panth-Shah/SinglePageToDo/blob/master/TODODbEntires.PNG)
 
